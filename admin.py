@@ -1,6 +1,4 @@
 # admin.py
-
-
 class User:
     def __init__(self, firstName, lastName, email, age, phoneNumber):
         self.firstName = firstName
@@ -45,13 +43,12 @@ class User:
 
 
 class Admin(User):
-    privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user',
-                  'can add user', 'can delete user', 'can reset user', 'can modify user profile']
 
-    def __init__(self, firstName, lastName, email, age, phoneNumber):
-        super().__init__(firstName, lastName, email, age, phoneNumber, privileges)
-        privileges = self.privileges
+    def __init__(self, firstName, lastName, email, age, phoneNumber, privileges=["can add post", "can delete post", "can modify post of user", "can ban user",
+                                                                                 "can add user", "can delete user", "can reset user", "can modify user profile"]
+                 ):
+        super().__init__(firstName, lastName, email, age, phoneNumber)
+        self.privileges = privileges
 
     def show_privileges(self):
-        privileges_list = f"Here are the current privileges of your specified user: {self.privileges}"
-        return print(privileges_list.upper())
+        return self.privileges

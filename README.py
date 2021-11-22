@@ -12,4 +12,4 @@ and so on. Create at least 8 privileges.
 [X] Write a method show_privileges() that lists the administrator's set of privileges. 
 [X] The class Admin will be in a file named admin.py
 [X] Create 2 objects of class Admin with at least 3 of the privileges. These objects must be in a file named "AdminPrivs.py"
-[ ] Zip the two files together and submit on Sunday, Nov. 21
+[X] Zip the two files together and submit on Sunday, Nov. 21
