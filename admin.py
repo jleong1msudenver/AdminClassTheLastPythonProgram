@@ -43,10 +43,15 @@ class User:
         complete_user_profile = f"Please verify your profile information below. \n First Name: {self.firstName} \n Last Name: {self.lastName} \n Email: {self.email} \n Age: {self.age} \n Phone Number: {self.phoneNumber}"
         return complete_user_profile.upper()
 
+
 class Admin(User):
-    privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user', 'can add user', 'can delete user', 'can reset user', 'can modify user profile']
+    privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user',
+                  'can add user', 'can delete user', 'can reset user', 'can modify user profile']
 
     def __init__(self, firstName, lastName, email, age, phoneNumber):
         super().__init__(firstName, lastName, email, age, phoneNumber, privileges)
         privileges = self.privileges
-    print(admin.privileges)
+
+    def show_privileges(self):
+        privileges_list = f"Here are the current privileges of your specified user: {self.privileges}"
+        return privileges_list.upper()
