@@ -9,7 +9,7 @@ class User:
         self.age = age
         self.phoneNumber = phoneNumber
 
-def setFirstName(self, firstName):
+    def setFirstName(self, firstName):
         self.firstName = firstName
 
     def setLastName(self, lastName):
@@ -45,4 +45,5 @@ def setFirstName(self, firstName):
 
 class Admin(User):
     def __init__(self, firstName, lastName, email, age, phoneNumber):
-        super().__init__(firstName, lastName, email, age, phoneNumber):
+        super().__init__(firstName, lastName, email, age, phoneNumber, user_privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user', 'can add user', 'can delete user', 'can reset user', 'can modify user profile'])
+        user_privileges = self.user_privileges
