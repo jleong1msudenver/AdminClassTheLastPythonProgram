@@ -54,4 +54,4 @@ class Admin(User):
 
     def show_privileges(self):
         privileges_list = f"Here are the current privileges of your specified user: {self.privileges}"
-        return privileges_list.upper()
+        return print(privileges_list.upper())
