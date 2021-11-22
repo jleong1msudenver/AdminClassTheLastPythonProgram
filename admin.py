@@ -44,6 +44,9 @@ class User:
         return complete_user_profile.upper()
 
 class Admin(User):
+    privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user', 'can add user', 'can delete user', 'can reset user', 'can modify user profile']
+
     def __init__(self, firstName, lastName, email, age, phoneNumber):
-        super().__init__(firstName, lastName, email, age, phoneNumber, user_privileges = ['can add post', 'can delete post', 'can modify post of user', 'can ban user', 'can add user', 'can delete user', 'can reset user', 'can modify user profile'])
-        user_privileges = self.user_privileges
+        super().__init__(firstName, lastName, email, age, phoneNumber, privileges)
+        privileges = self.privileges
+    print(admin.privileges)

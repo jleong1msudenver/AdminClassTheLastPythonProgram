@@ -7,7 +7,7 @@ Due Sunday by 11:59pm
 * Allowed Attempts 5
 A system administrator, whether Linux or Windows, is a special User. 
 [X] Write a class Admin that inherits from the User class. 
-[ ] Add an attribute privileges that stores a list of strings, e.g. "can add post", "can delete post", "can ban user", "can add user", 
+[X] Add an attribute privileges that stores a list of strings, e.g. "can add post", "can delete post", "can ban user", "can add user", 
 and so on. Create at least 8 privileges. 
 [ ] Write a method show_privileges() that lists the administrator's set of privileges. 
 [ ] The class Admin will be in a file named admin.py
